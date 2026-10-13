@@ -1,15 +1,12 @@
 import { test, expect } from './fixture/pages.fixture.js';
 
-test('Fluxo de compra', async ({ page, loginPage }) => {    
+test('Fluxo de compra', async ({ page, LoginPages }) => {    
 
 
-  await loginPage.open();
+  await LoginPages.open();
    // Enter valid username and password
    // Click the login button
-  await loginPage.login('standard_user', 'secret_sauce');
-
- 
-   // await page.click('#login-button');
+  await LoginPages.login('standard_user', 'secret_sauce');
 
   // Expect to be redirected to the inventory page
   await expect(page).toHaveURL('https://www.saucedemo.com/inventory.html');

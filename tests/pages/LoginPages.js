@@ -1,11 +1,11 @@
 import {BasePage} from "./BasePage";
 
-export class LoginPage extends BasePage {
+export class LoginPages extends BasePage {
     constructor(page) {
         super(page);
-        this.usernameInput = page.getById('user-name');
-        this.passwordInput = page.getById('password');
-        this.loginButton = page.getById('login-button');
+        this.usernameInput = page.locator('#user-name');
+        this.passwordInput = page.locator('#password');
+        this.loginButton = page.locator('#login-button');
     } 
 
     async open() {
